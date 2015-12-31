@@ -1,0 +1,31 @@
+@startuml
+
+class Game{
+field : Field
+}
+class Field{
+#cells : short[][]
+-random : Random
+-turnDirection : MoveBuilder
+Field()
++showField():void
+makeTurn(MoveBuilder):void
+-buildNewCipher(): void
+-setCell(short value,byte,byte):void
+-cipherGenerator(boolean isForCell):byte
+}
+
+class MoveBuilder{
+}
+class Up{
+}
+
+
+Game --> Field
+Field --> MoveBuilder
+MoveBuilder <|-- Up
+@enduml
+
+
+
+
